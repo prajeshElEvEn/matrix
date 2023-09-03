@@ -1,14 +1,25 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TextInput, View } from "react-native";
 import React from "react";
 
-const Field = () => {
+const Field = ({ bgColor, placeholder }) => {
   return (
-    <View>
-      <Text>Field</Text>
+    <View style={styles.card}>
+      <TextInput
+        style={[styles.input, { backgroundColor: bgColor }]}
+        // onChangeText={}
+        // value={}
+        placeholder={placeholder}
+      />
     </View>
   );
 };
 
 export default Field;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  input: {
+    fontSize: 16,
+    padding: 10,
+    borderRadius: 10,
+  },
+});
